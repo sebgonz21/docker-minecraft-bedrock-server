@@ -55,8 +55,6 @@ COPY bin/* /usr/local/bin/
 ENV VERSION=LATEST \
     SERVER_PORT=19132
 
-ENV SERVER_NAME="Render Bedrock Server"
-
 HEALTHCHECK --start-period=1m CMD /usr/local/bin/mc-monitor status-bedrock --host 127.0.0.1 --port $SERVER_PORT
 
 ARG BUILDTIME=local

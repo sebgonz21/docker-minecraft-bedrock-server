@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: minecraft-bedrock
+    plan: starter
+    env: docker
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    ports:
+      - port: 19132
+        protocol: udp
+    disk:
+      name: bedrock-data
+      mountPath: /data
+      sizeGB: 5
